@@ -24,7 +24,8 @@ jobs:
         run: mise run test
         continue-on-error: true
       - name: Commit conformance.json
-        if: github.event_name != 'pull_request'
+        # The template itself doesn't commit one, so repos made from it start clean.
+        if: github.event_name != 'pull_request' && github.repository != 'gshaw/algorithms-template'
         run: |
           git add conformance.json
           if git diff --cached --quiet; then
