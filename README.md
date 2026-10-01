@@ -23,7 +23,7 @@ language: pick one, replace `evaluate` and the check does the rest.
    off standard output.
 4. `mise run test` runs the checker over the current test data, prints every case and
    writes `conformance.json`.
-5. Push. The Conformance workflow runs the check on every push and weekly, and commits
+5. Push. The Conformance workflow runs the check on every push and daily, and commits
    `conformance.json`.
 6. To be listed on the site, open a pull request on
    [gshaw/algorithms](https://github.com/gshaw/algorithms) adding your repo to
